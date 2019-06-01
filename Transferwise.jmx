@@ -88,8 +88,9 @@
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="1_TC_Homepage Launch" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui)
 var wait = new pkg.WebDriverWait(WDS.browser, 120, 200)
+WDS.browser.manage().window().setSize(new pkg.Dimension(1280, 1024))
 
-WDS.browser.manage().window().maximize()
+//WDS.browser.manage().window().maximize()
 java.lang.Thread.sleep(2000)
 WDS.browser.get(&apos;${URL}&apos;)
 WDS.sampleResult.sampleStart()
@@ -125,8 +126,9 @@ WDS.sampleResult.sampleEnd()
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="2_TC_Login " enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui)
 var wait = new pkg.WebDriverWait(WDS.browser, 120, 200)
+WDS.browser.manage().window().setSize(new pkg.Dimension(1280, 1024))
 
-java.lang.Thread.sleep(2000)
+//java.lang.Thread.sleep(2000)
 WDS.browser.findElement(pkg.By.xpath(&apos;//login/div/div[2]/form/div[1]/input&apos;)).sendKeys(&apos;${Username}&apos;)
 java.lang.Thread.sleep(2000)
 WDS.browser.findElement(pkg.By.xpath(&apos;//div/div[2]/form/div[2]/div[1]/input&apos;)).sendKeys(&apos;${Password}&apos;)
