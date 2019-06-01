@@ -88,8 +88,9 @@
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="1_TC_Homepage Launch" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui)
 var wait = new pkg.WebDriverWait(WDS.browser, 120, 200)
-WDS.browser.manage().window().setPosition(new pkg.Point(0, 0))
-WDS.browser.manage().window().setSize(new pkg.Dimension(1382, 744))
+var dimension = new pkg.Dimension (1920, 1280);
+WDS.browser.size = dimension;
+WDS.browser.manage().window().size = dimension;
 
 //WDS.browser.manage().window().maximize()
 java.lang.Thread.sleep(2000)
