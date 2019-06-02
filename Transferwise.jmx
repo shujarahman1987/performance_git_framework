@@ -50,42 +50,21 @@
         <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
         <stringProp name="ChromeDriverConfig.chromedriver_path">drivers\chromedriver.exe</stringProp>
         <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
-        <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+        <boolProp name="ChromeDriverConfig.headless_enabled">true</boolProp>
         <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
       </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
-      <hashTree/>
-      <com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig guiclass="com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfigGui" testclass="com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig" testname="Phantom JS Driver" enabled="false">
-        <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
-        <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
-        <stringProp name="WebDriverConfig.http_host"></stringProp>
-        <intProp name="WebDriverConfig.http_port">8080</intProp>
-        <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
-        <stringProp name="WebDriverConfig.https_host"></stringProp>
-        <intProp name="WebDriverConfig.https_port">8080</intProp>
-        <stringProp name="WebDriverConfig.ftp_host"></stringProp>
-        <intProp name="WebDriverConfig.ftp_port">8080</intProp>
-        <stringProp name="WebDriverConfig.socks_host"></stringProp>
-        <intProp name="WebDriverConfig.socks_port">8080</intProp>
-        <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
-        <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
-        <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
-        <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
-        <stringProp name="PhantomJSDriverConfig.phantomjs_path">drivers\phantomjs.exe</stringProp>
-        <stringProp name="PhantomJSDriverConfig.phantomjs_cli_args">--webdriver-loglevel=NONE</stringProp>
-        <stringProp name="PhantomJSDriverConfig.phantomjs_ghostdriver_cli_args"></stringProp>
-      </com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig>
       <hashTree/>
       <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="TG_Transferwise" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">2</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <longProp name="ThreadGroup.start_time">1494818275000</longProp>
         <longProp name="ThreadGroup.end_time">1494818275000</longProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">1200</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </SetupThreadGroup>
@@ -109,11 +88,11 @@
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="1_TC_Homepage Launch" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui)
 var wait = new pkg.WebDriverWait(WDS.browser, 120, 200)
-//var dimension = new pkg.Dimension (1920, 1280);
-//WDS.browser.size = dimension;
-//WDS.browser.manage().window().size = dimension;
+var dimension = new pkg.Dimension (1920, 1280);
+WDS.browser.size = dimension;
+WDS.browser.manage().window().size = dimension;
 
-WDS.browser.manage().window().maximize()
+//WDS.browser.manage().window().maximize()
 java.lang.Thread.sleep(2000)
 WDS.browser.get(&apos;${URL}&apos;)
 WDS.sampleResult.sampleStart()
