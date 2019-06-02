@@ -50,7 +50,7 @@
         <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
         <stringProp name="ChromeDriverConfig.chromedriver_path">drivers\chromedriver.exe</stringProp>
         <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
-        <boolProp name="ChromeDriverConfig.headless_enabled">true</boolProp>
+        <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
         <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
       </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
       <hashTree/>
@@ -88,11 +88,11 @@
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="1_TC_Homepage Launch" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui)
 var wait = new pkg.WebDriverWait(WDS.browser, 120, 200)
-var dimension = new pkg.Dimension (1920, 1280);
-WDS.browser.size = dimension;
-WDS.browser.manage().window().size = dimension;
+//var dimension = new pkg.Dimension (1920, 1280);
+//WDS.browser.size = dimension;
+//WDS.browser.manage().window().size = dimension;
 
-//WDS.browser.manage().window().maximize()
+WDS.browser.manage().window().maximize()
 java.lang.Thread.sleep(2000)
 WDS.browser.get(&apos;${URL}&apos;)
 WDS.sampleResult.sampleStart()
