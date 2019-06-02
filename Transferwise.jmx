@@ -50,7 +50,7 @@
         <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
         <stringProp name="ChromeDriverConfig.chromedriver_path">drivers\chromedriver.exe</stringProp>
         <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
-        <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+        <boolProp name="ChromeDriverConfig.headless_enabled">true</boolProp>
         <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
       </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
       <hashTree/>
@@ -86,7 +86,7 @@
         <longProp name="ThreadGroup.start_time">1494818275000</longProp>
         <longProp name="ThreadGroup.end_time">1494818275000</longProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">600</stringProp>
+        <stringProp name="ThreadGroup.duration">1200</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </SetupThreadGroup>
       <hashTree>
