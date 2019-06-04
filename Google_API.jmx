@@ -184,7 +184,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename"></stringProp>
+          <stringProp name="filename">results/Transferwise_Performance_Test_Results.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
