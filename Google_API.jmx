@@ -184,7 +184,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">C:\Users\user\Downloads\apache-jmeter-5.1.1\bin\aggregate_reports\Performance_Test_Results_Google_API.csv</stringProp>
+          <stringProp name="filename">C:\Users\user\Downloads\apache-jmeter-5.1.1\bin\aggregate_results\Performance_Test_Results_Google_API.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
