@@ -18,8 +18,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">5</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">300</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -352,7 +352,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">C:\Users\user\Downloads\apache-jmeter-5.1.1\bin\aggregate_results\Performance_Test_Results_Three_API.csv</stringProp>
+          <stringProp name="filename">C:\Users\user\Downloads\apache-jmeter-5.1.1\bin\aggregate_results\Performance_Test_Results_Three_API_1.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
