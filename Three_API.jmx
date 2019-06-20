@@ -7,23 +7,7 @@
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="Threads" elementType="Argument">
-            <stringProp name="Argument.name">Threads</stringProp>
-            <stringProp name="Argument.value">${__P(Run.THREADS)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="Rampup" elementType="Argument">
-            <stringProp name="Argument.name">Rampup</stringProp>
-            <stringProp name="Argument.value">${__P(Run.RAMPUP)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="Duration" elementType="Argument">
-            <stringProp name="Argument.name">Duration</stringProp>
-            <stringProp name="Argument.value">${__P(Run.DURATION)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-        </collectionProp>
+        <collectionProp name="Arguments.arguments"/>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
@@ -34,10 +18,10 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${Threads}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${Rampup}</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(Threads,1)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(RampUP,1)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${Duration}</stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(Duration,1)}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
